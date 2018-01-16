@@ -1,8 +1,8 @@
 {
   "name": "sciactive/logalyzer-server",
   "description": "Server files for Logalyzer - Build a log analyzer for anything.",
-  "version": "0.0.1-alpha.1",
-  "time": "2018-01-15",
+  "version": "0.0.1-alpha.2",
+  "time": "2018-01-16",
   "type": "library",
   "license": "Apache-2.0",
   "authors": [
@@ -31,7 +31,7 @@
   "require": {
     "sciactive/nymph-server": "^3.0@beta",
     "sciactive/nymph-pubsub": "^3.0@beta",
-    "sciactive/tilmeld": "^1.0@beta",
+    "sciactive/tilmeld-server": "^1.0@beta",
     "maxmind-db/reader": "~1.0"
   }
 }
