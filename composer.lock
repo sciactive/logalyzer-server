@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "fa38afa429c714793fe55283d8b855da",
@@ -139,17 +139,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "d2537c86fa8b004c29e9b9f5e10028f0a29df101"
+                "reference": "58f6e264ef0e4107c8b3d15a9c2e653b2bce0b4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/d2537c86fa8b004c29e9b9f5e10028f0a29df101",
-                "reference": "d2537c86fa8b004c29e9b9f5e10028f0a29df101",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/58f6e264ef0e4107c8b3d15a9c2e653b2bce0b4d",
+                "reference": "58f6e264ef0e4107c8b3d15a9c2e653b2bce0b4d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0",
-                "psr/http-message": "~1.0"
+                "psr/http-message": "~1.0",
+                "ralouphie/getallheaders": "^2.0.5"
             },
             "provide": {
                 "psr/http-message-implementation": "1.0"
@@ -160,7 +161,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4-dev"
+                    "dev-master": "1.5-dev"
                 }
             },
             "autoload": {
@@ -196,20 +197,78 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-10-07T03:19:56+00:00"
+            "time": "2018-06-08T08:55:26+00:00"
         },
         {
-            "name": "maxmind-db/reader",
-            "version": "v1.2.0",
+            "name": "lcobucci/jwt",
+            "version": "3.3.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/maxmind/MaxMind-DB-Reader-php.git",
-                "reference": "1647820dfbcb552222fb5feb3a8387e2636394c9"
+                "url": "https://github.com/lcobucci/jwt.git",
+                "reference": "2c2c77fb863a20cc90b7b686c88275e85581bd03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maxmind/MaxMind-DB-Reader-php/zipball/1647820dfbcb552222fb5feb3a8387e2636394c9",
-                "reference": "1647820dfbcb552222fb5feb3a8387e2636394c9",
+                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/2c2c77fb863a20cc90b7b686c88275e85581bd03",
+                "reference": "2c2c77fb863a20cc90b7b686c88275e85581bd03",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "mdanter/ecc": "~0.3.1",
+                "mikey179/vfsstream": "~1.5",
+                "phpmd/phpmd": "~2.2",
+                "phpunit/php-invoker": "~1.1",
+                "phpunit/phpunit": "~4.5",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "suggest": {
+                "mdanter/ecc": "Required to use Elliptic Curves based algorithms."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lcobucci\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Luís Otávio Cobucci Oblonczyk",
+                    "email": "lcobucci@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to work with JSON Web Token and JSON Web Signature",
+            "keywords": [
+                "JWS",
+                "jwt"
+            ],
+            "time": "2016-10-31T20:12:20+00:00"
+        },
+        {
+            "name": "maxmind-db/reader",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxmind/MaxMind-DB-Reader-php.git",
+                "reference": "e042b4f8a2dff41e19019faf16427178b07fbd58"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxmind/MaxMind-DB-Reader-php/zipball/e042b4f8a2dff41e19019faf16427178b07fbd58",
+                "reference": "e042b4f8a2dff41e19019faf16427178b07fbd58",
                 "shasum": ""
             },
             "require": {
@@ -217,7 +276,7 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "2.*",
-                "phpunit/phpunit": "4.*",
+                "phpunit/phpunit": "4.* || 5.*",
                 "satooshi/php-coveralls": "1.0.*",
                 "squizlabs/php_codesniffer": "3.*"
             },
@@ -252,7 +311,7 @@
                 "geolocation",
                 "maxmind"
             ],
-            "time": "2017-10-27T19:15:33+00:00"
+            "time": "2018-02-21T21:23:33+00:00"
         },
         {
             "name": "psr/container",
@@ -359,12 +418,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+                "reference": "3490ba5925e6dcbe6de950c5c6b8dce9f6e96eda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/3490ba5925e6dcbe6de950c5c6b8dce9f6e96eda",
+                "reference": "3490ba5925e6dcbe6de950c5c6b8dce9f6e96eda",
                 "shasum": ""
             },
             "require": {
@@ -398,20 +457,60 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10T12:19:37+00:00"
+            "time": "2018-04-03T15:59:15+00:00"
         },
         {
-            "name": "ratchet/rfc6455",
-            "version": "v0.2.3",
+            "name": "ralouphie/getallheaders",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ratchetphp/RFC6455.git",
-                "reference": "cc8a1a46a703ce01de10fdb5fab387381b66edc8"
+                "url": "https://github.com/ralouphie/getallheaders.git",
+                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ratchetphp/RFC6455/zipball/cc8a1a46a703ce01de10fdb5fab387381b66edc8",
-                "reference": "cc8a1a46a703ce01de10fdb5fab387381b66edc8",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
+                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7.0",
+                "satooshi/php-coveralls": ">=1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/getallheaders.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ralph Khattar",
+                    "email": "ralph.khattar@gmail.com"
+                }
+            ],
+            "description": "A polyfill for getallheaders.",
+            "time": "2016-02-11T07:05:27+00:00"
+        },
+        {
+            "name": "ratchet/rfc6455",
+            "version": "0.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ratchetphp/RFC6455.git",
+                "reference": "1612f528c3496ad06e910d0f8b6f16ab97696706"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ratchetphp/RFC6455/zipball/1612f528c3496ad06e910d0f8b6f16ab97696706",
+                "reference": "1612f528c3496ad06e910d0f8b6f16ab97696706",
                 "shasum": ""
             },
             "require": {
@@ -447,7 +546,7 @@
                 "rfc6455",
                 "websocket"
             ],
-            "time": "2017-09-13T13:49:42+00:00"
+            "time": "2018-05-02T14:52:00+00:00"
         },
         {
             "name": "react/cache",
@@ -491,16 +590,16 @@
         },
         {
             "name": "react/dns",
-            "version": "v0.4.12",
+            "version": "v0.4.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/dns.git",
-                "reference": "c74a0af0c7254e73600fd8c5c95f6bf23c5998f4"
+                "reference": "7d1e08c300fd7de600810883386ee5e2a64898f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/dns/zipball/c74a0af0c7254e73600fd8c5c95f6bf23c5998f4",
-                "reference": "c74a0af0c7254e73600fd8c5c95f6bf23c5998f4",
+                "url": "https://api.github.com/repos/reactphp/dns/zipball/7d1e08c300fd7de600810883386ee5e2a64898f4",
+                "reference": "7d1e08c300fd7de600810883386ee5e2a64898f4",
                 "shasum": ""
             },
             "require": {
@@ -509,7 +608,6 @@
                 "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3.5",
                 "react/promise": "^2.1 || ^1.2.1",
                 "react/promise-timer": "^1.2",
-                "react/socket": "^1.0 || ^0.8 || ^0.7 || ^0.6 || ^0.5 || ^0.4.4",
                 "react/stream": "^1.0 || ^0.7 || ^0.6 || ^0.5 || ^0.4.5"
             },
             "require-dev": {
@@ -533,32 +631,31 @@
                 "dns-resolver",
                 "reactphp"
             ],
-            "time": "2018-01-14T10:04:36+00:00"
+            "time": "2018-02-27T12:51:22+00:00"
         },
         {
             "name": "react/event-loop",
-            "version": "0.4.x-dev",
+            "version": "v0.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/event-loop.git",
-                "reference": "8bde03488ee897dc6bb3d91e4e17c353f9c5252f"
+                "reference": "e94985d93c689c554265b01014f8c3064921ca27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/8bde03488ee897dc6bb3d91e4e17c353f9c5252f",
-                "reference": "8bde03488ee897dc6bb3d91e4e17c353f9c5252f",
+                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/e94985d93c689c554265b01014f8c3064921ca27",
+                "reference": "e94985d93c689c554265b01014f8c3064921ca27",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
+                "php": ">=5.3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8"
+                "phpunit/phpunit": "~4.8.35 || ^5.7 || ^6.4"
             },
             "suggest": {
-                "ext-event": "~1.0",
-                "ext-libev": "*",
-                "ext-libevent": ">=0.1.0"
+                "ext-event": "~1.0 for ExtEventLoop",
+                "ext-pcntl": "For signal handling support when using the StreamSelectLoop"
             },
             "type": "library",
             "autoload": {
@@ -570,12 +667,12 @@
             "license": [
                 "MIT"
             ],
-            "description": "Event loop abstraction layer that libraries can use for evented I/O.",
+            "description": "ReactPHP's core reactor event loop that libraries can use for evented I/O.",
             "keywords": [
                 "asynchronous",
                 "event-loop"
             ],
-            "time": "2017-04-27T10:56:23+00:00"
+            "time": "2018-04-24T11:23:06+00:00"
         },
         {
             "name": "react/promise",
@@ -583,12 +680,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "179520ec0b25cf4c742d9653be9f4964d64d4a6e"
+                "reference": "f4edc2581617431aea50430749db55cc3fc031b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/179520ec0b25cf4c742d9653be9f4964d64d4a6e",
-                "reference": "179520ec0b25cf4c742d9653be9f4964d64d4a6e",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/f4edc2581617431aea50430749db55cc3fc031b3",
+                "reference": "f4edc2581617431aea50430749db55cc3fc031b3",
                 "shasum": ""
             },
             "require": {
@@ -621,26 +718,26 @@
                 "promise",
                 "promises"
             ],
-            "time": "2017-09-19T13:02:44+00:00"
+            "time": "2018-06-13T15:59:06+00:00"
         },
         {
             "name": "react/promise-timer",
-            "version": "v1.2.1",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise-timer.git",
-                "reference": "9b4cd9cbe7457e0d87fe8aa7ccceab8a2c830fbd"
+                "reference": "a11206938ca2394dc7bb368f5da25cd4533fa603"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise-timer/zipball/9b4cd9cbe7457e0d87fe8aa7ccceab8a2c830fbd",
-                "reference": "9b4cd9cbe7457e0d87fe8aa7ccceab8a2c830fbd",
+                "url": "https://api.github.com/repos/reactphp/promise-timer/zipball/a11206938ca2394dc7bb368f5da25cd4533fa603",
+                "reference": "a11206938ca2394dc7bb368f5da25cd4533fa603",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3",
                 "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3.5",
-                "react/promise": "~2.1|~1.2"
+                "react/promise": "^2.7.0 || ^1.2.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
@@ -665,7 +762,7 @@
                 }
             ],
             "description": "A trivial implementation of timeouts for Promises, built on top of ReactPHP.",
-            "homepage": "https://github.com/react/promise-timer",
+            "homepage": "https://github.com/reactphp/promise-timer",
             "keywords": [
                 "async",
                 "event-loop",
@@ -674,29 +771,29 @@
                 "timeout",
                 "timer"
             ],
-            "time": "2017-12-22T15:41:41+00:00"
+            "time": "2018-06-13T16:45:37+00:00"
         },
         {
             "name": "react/socket",
-            "version": "v0.8.8",
+            "version": "v0.8.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/socket.git",
-                "reference": "e9e206b6277023bf4afd910a764f0cd3d470e7ed"
+                "reference": "7f7e6c56ccda7418a1a264892a625f38a5bdee0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/socket/zipball/e9e206b6277023bf4afd910a764f0cd3d470e7ed",
-                "reference": "e9e206b6277023bf4afd910a764f0cd3d470e7ed",
+                "url": "https://api.github.com/repos/reactphp/socket/zipball/7f7e6c56ccda7418a1a264892a625f38a5bdee0c",
+                "reference": "7f7e6c56ccda7418a1a264892a625f38a5bdee0c",
                 "shasum": ""
             },
             "require": {
                 "evenement/evenement": "^3.0 || ^2.0 || ^1.0",
                 "php": ">=5.3.0",
-                "react/dns": "^0.4.11",
+                "react/dns": "^0.4.13",
                 "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3.5",
-                "react/promise": "^2.1 || ^1.2",
-                "react/promise-timer": "~1.0",
+                "react/promise": "^2.6.0 || ^1.2.1",
+                "react/promise-timer": "^1.4.0",
                 "react/stream": "^1.0 || ^0.7.1"
             },
             "require-dev": {
@@ -721,26 +818,26 @@
                 "reactphp",
                 "stream"
             ],
-            "time": "2018-01-06T12:13:20+00:00"
+            "time": "2018-06-11T14:33:43+00:00"
         },
         {
             "name": "react/stream",
-            "version": "v0.7.6",
+            "version": "v0.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/stream.git",
-                "reference": "4e07a0014896cbbb73e2f2b2c28e86174b6e1d4d"
+                "reference": "10100896018fd847a257cd81143b8e1b7be08e40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/stream/zipball/4e07a0014896cbbb73e2f2b2c28e86174b6e1d4d",
-                "reference": "4e07a0014896cbbb73e2f2b2c28e86174b6e1d4d",
+                "url": "https://api.github.com/repos/reactphp/stream/zipball/10100896018fd847a257cd81143b8e1b7be08e40",
+                "reference": "10100896018fd847a257cd81143b8e1b7be08e40",
                 "shasum": ""
             },
             "require": {
                 "evenement/evenement": "^3.0 || ^2.0 || ^1.0",
                 "php": ">=5.3.8",
-                "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3"
+                "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3.5"
             },
             "require-dev": {
                 "clue/stream-filter": "~1.2",
@@ -767,7 +864,7 @@
                 "stream",
                 "writable"
             ],
-            "time": "2017-12-21T14:12:01+00:00"
+            "time": "2018-01-19T15:04:38+00:00"
         },
         {
             "name": "respect/validation",
@@ -775,12 +872,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Respect/Validation.git",
-                "reference": "ee9e69776a8e875ac1b5b00d8cf2d2c801c42181"
+                "reference": "700e23777ff6954babf55eed72a286792f594648"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Respect/Validation/zipball/ee9e69776a8e875ac1b5b00d8cf2d2c801c42181",
-                "reference": "ee9e69776a8e875ac1b5b00d8cf2d2c801c42181",
+                "url": "https://api.github.com/repos/Respect/Validation/zipball/700e23777ff6954babf55eed72a286792f594648",
+                "reference": "700e23777ff6954babf55eed72a286792f594648",
                 "shasum": ""
             },
             "require": {
@@ -830,7 +927,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2018-01-02T21:47:22+00:00"
+            "time": "2018-06-06T12:57:39+00:00"
         },
         {
             "name": "sciactive/hookphp",
@@ -884,16 +981,16 @@
         },
         {
             "name": "sciactive/nymph-pubsub",
-            "version": "3.0.0-beta.2",
+            "version": "3.0.0-beta.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sciactive/nymph-pubsub.git",
-                "reference": "edb248e4cc217489c1cc2245028ea7857b6a6242"
+                "reference": "f20d5f6ce55a0e5378949270d79c8b0cffbc4aec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sciactive/nymph-pubsub/zipball/edb248e4cc217489c1cc2245028ea7857b6a6242",
-                "reference": "edb248e4cc217489c1cc2245028ea7857b6a6242",
+                "url": "https://api.github.com/repos/sciactive/nymph-pubsub/zipball/f20d5f6ce55a0e5378949270d79c8b0cffbc4aec",
+                "reference": "f20d5f6ce55a0e5378949270d79c8b0cffbc4aec",
                 "shasum": ""
             },
             "require": {
@@ -902,6 +999,9 @@
                 "sciactive/nymph-server": "^3.0@beta",
                 "textalk/websocket": "1.2.*",
                 "zendframework/zend-log": "2.*"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "3.*"
             },
             "type": "library",
             "autoload": {
@@ -933,25 +1033,26 @@
                 "pubsub",
                 "subscribe"
             ],
-            "time": "2017-11-17T00:00:00+00:00"
+            "time": "2018-05-04T00:00:00+00:00"
         },
         {
             "name": "sciactive/nymph-server",
-            "version": "3.0.0-beta.7",
+            "version": "3.0.0-beta.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sciactive/nymph-server.git",
-                "reference": "740c65e2e1dbea7ceee0165c37f5ca73f1cb6cbb"
+                "reference": "12668e88327b7fbe4cc0f99db077ad63fd453f89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sciactive/nymph-server/zipball/740c65e2e1dbea7ceee0165c37f5ca73f1cb6cbb",
-                "reference": "740c65e2e1dbea7ceee0165c37f5ca73f1cb6cbb",
+                "url": "https://api.github.com/repos/sciactive/nymph-server/zipball/12668e88327b7fbe4cc0f99db077ad63fd453f89",
+                "reference": "12668e88327b7fbe4cc0f99db077ad63fd453f89",
                 "shasum": ""
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.1",
-                "sciactive/hookphp": "~2.0.2"
+                "phpunit/phpunit": "^7.1",
+                "sciactive/hookphp": "~2.0.2",
+                "squizlabs/php_codesniffer": "3.*"
             },
             "type": "library",
             "autoload": {
@@ -986,28 +1087,31 @@
                 "postgres",
                 "postgresql"
             ],
-            "time": "2018-01-11T00:00:00+00:00"
+            "time": "2018-06-08T00:00:00+00:00"
         },
         {
             "name": "sciactive/tilmeld-server",
-            "version": "1.0.0-beta.13",
+            "version": "1.0.0-beta.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sciactive/tilmeld-server.git",
-                "reference": "6e3cd017ab76ea8a34e45ad09dc5d68a3c77a73c"
+                "reference": "679dd99d9c29f8aa6d37e24b2b1c0ff4737d70ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sciactive/tilmeld-server/zipball/6e3cd017ab76ea8a34e45ad09dc5d68a3c77a73c",
-                "reference": "6e3cd017ab76ea8a34e45ad09dc5d68a3c77a73c",
+                "url": "https://api.github.com/repos/sciactive/tilmeld-server/zipball/679dd99d9c29f8aa6d37e24b2b1c0ff4737d70ef",
+                "reference": "679dd99d9c29f8aa6d37e24b2b1c0ff4737d70ef",
                 "shasum": ""
             },
             "require": {
+                "lcobucci/jwt": "^3.2",
                 "respect/validation": "^1.1",
                 "sciactive/hookphp": "^2.0",
-                "sciactive/nymph-pubsub": "~3.0@beta",
                 "sciactive/nymph-server": "~3.0@beta",
-                "sciactive/umailphp": "^2.2"
+                "sciactive/umailphp": "^2.4"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "3.*"
             },
             "type": "library",
             "autoload": {
@@ -1042,20 +1146,20 @@
                 "nymph",
                 "user manager"
             ],
-            "time": "2018-01-17T00:00:00+00:00"
+            "time": "2018-06-11T00:00:00+00:00"
         },
         {
             "name": "sciactive/umailphp",
-            "version": "2.2.0",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sciactive/umailphp.git",
-                "reference": "b9a2cff16cfaf3136d768fe1db885d36fdbc9348"
+                "reference": "4a2db7283e0f58e004a2261e818c3b08f45b5547"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sciactive/umailphp/zipball/b9a2cff16cfaf3136d768fe1db885d36fdbc9348",
-                "reference": "b9a2cff16cfaf3136d768fe1db885d36fdbc9348",
+                "url": "https://api.github.com/repos/sciactive/umailphp/zipball/4a2db7283e0f58e004a2261e818c3b08f45b5547",
+                "reference": "4a2db7283e0f58e004a2261e818c3b08f45b5547",
                 "shasum": ""
             },
             "require": {
@@ -1082,13 +1186,13 @@
                     "role": "Developer"
                 }
             ],
-            "description": "A PHP email templating system.",
+            "description": "An email templating system for Nymph.",
             "homepage": "http://umailphp.org/",
             "keywords": [
                 "email",
                 "templating"
             ],
-            "time": "2017-11-16T00:00:00+00:00"
+            "time": "2018-05-14T00:00:00+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -1096,12 +1200,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "f45b663d84906a70c125d7757877484c8bbb2ee0"
+                "reference": "83c611dc1d9638e4216d8cc8007db8460d989163"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/f45b663d84906a70c125d7757877484c8bbb2ee0",
-                "reference": "f45b663d84906a70c125d7757877484c8bbb2ee0",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/83c611dc1d9638e4216d8cc8007db8460d989163",
+                "reference": "83c611dc1d9638e4216d8cc8007db8460d989163",
                 "shasum": ""
             },
             "require": {
@@ -1109,12 +1213,13 @@
                 "symfony/polyfill-mbstring": "~1.1"
             },
             "require-dev": {
+                "predis/predis": "~1.0",
                 "symfony/expression-language": "~3.4|~4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -1141,7 +1246,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-15T16:21:16+00:00"
+            "time": "2018-06-19T21:38:29+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1149,12 +1254,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "750a2b259dd68436e3b918a4241e80b023a80663"
+                "reference": "25b83a5050c6607e2dfa814ffb15388caf7ce690"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/750a2b259dd68436e3b918a4241e80b023a80663",
-                "reference": "750a2b259dd68436e3b918a4241e80b023a80663",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/25b83a5050c6607e2dfa814ffb15388caf7ce690",
+                "reference": "25b83a5050c6607e2dfa814ffb15388caf7ce690",
                 "shasum": ""
             },
             "require": {
@@ -1166,7 +1271,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
@@ -1200,7 +1305,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-12-17T16:08:10+00:00"
+            "time": "2018-05-30T15:56:36+00:00"
         },
         {
             "name": "symfony/routing",
@@ -1208,12 +1313,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-                "reference": "53ded2a4e0230e07540554728c445f27e06885ed"
+                "reference": "538532506941e3c740433aff104cfaa37063d499"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/routing/zipball/53ded2a4e0230e07540554728c445f27e06885ed",
-                "reference": "53ded2a4e0230e07540554728c445f27e06885ed",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/538532506941e3c740433aff104cfaa37063d499",
+                "reference": "538532506941e3c740433aff104cfaa37063d499",
                 "shasum": ""
             },
             "require": {
@@ -1226,7 +1331,6 @@
             },
             "require-dev": {
                 "doctrine/annotations": "~1.0",
-                "doctrine/common": "~2.2",
                 "psr/log": "~1.0",
                 "symfony/config": "~3.4|~4.0",
                 "symfony/dependency-injection": "~3.4|~4.0",
@@ -1245,7 +1349,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -1278,7 +1382,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2018-01-16T18:04:31+00:00"
+            "time": "2018-06-19T11:41:48+00:00"
         },
         {
             "name": "textalk/websocket",
@@ -1325,12 +1429,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-log.git",
-                "reference": "8b2c5c1ae474970ba6aff3d583ba7631f09c0a66"
+                "reference": "5cb1e94d203f3e2c2e848a66ec6888479906d0e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-log/zipball/8b2c5c1ae474970ba6aff3d583ba7631f09c0a66",
-                "reference": "8b2c5c1ae474970ba6aff3d583ba7631f09c0a66",
+                "url": "https://api.github.com/repos/zendframework/zend-log/zipball/5cb1e94d203f3e2c2e848a66ec6888479906d0e8",
+                "reference": "5cb1e94d203f3e2c2e848a66ec6888479906d0e8",
                 "shasum": ""
             },
             "require": {
@@ -1350,7 +1454,7 @@
                 "zendframework/zend-escaper": "^2.5",
                 "zendframework/zend-filter": "^2.5",
                 "zendframework/zend-mail": "^2.6.1",
-                "zendframework/zend-validator": "^2.6"
+                "zendframework/zend-validator": "^2.10.1"
             },
             "suggest": {
                 "ext-mongo": "mongo extension to use Mongo writer",
@@ -1364,8 +1468,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.9-dev",
-                    "dev-develop": "2.10-dev"
+                    "dev-master": "2.10.x-dev",
+                    "dev-develop": "2.11.x-dev"
                 },
                 "zf": {
                     "component": "Zend\\Log",
@@ -1381,14 +1485,14 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "description": "component for general purpose logging",
-            "homepage": "https://github.com/zendframework/zend-log",
+            "description": "Robust, composite logger with filtering, formatting, and PSR-3 support",
             "keywords": [
+                "ZendFramework",
                 "log",
                 "logging",
-                "zf2"
+                "zf"
             ],
-            "time": "2017-05-17T16:05:06+00:00"
+            "time": "2018-04-10T17:12:12+00:00"
         },
         {
             "name": "zendframework/zend-servicemanager",
@@ -1396,12 +1500,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-servicemanager.git",
-                "reference": "e11039a64ed2d0512e9eb211d468898795ecba8e"
+                "reference": "0aea76faf40350852fd6570cb4c1eb60a18ac872"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-servicemanager/zipball/e11039a64ed2d0512e9eb211d468898795ecba8e",
-                "reference": "e11039a64ed2d0512e9eb211d468898795ecba8e",
+                "url": "https://api.github.com/repos/zendframework/zend-servicemanager/zipball/0aea76faf40350852fd6570cb4c1eb60a18ac872",
+                "reference": "0aea76faf40350852fd6570cb4c1eb60a18ac872",
                 "shasum": ""
             },
             "require": {
@@ -1456,7 +1560,7 @@
                 "servicemanager",
                 "zf"
             ],
-            "time": "2017-11-28T21:40:47+00:00"
+            "time": "2018-02-26T16:15:29+00:00"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -1464,12 +1568,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-stdlib.git",
-                "reference": "c0404b360fabc8a18a49d9bee0cdd4ba790028ef"
+                "reference": "181042fd782146364e66fed138f04fc822cfaef6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/c0404b360fabc8a18a49d9bee0cdd4ba790028ef",
-                "reference": "c0404b360fabc8a18a49d9bee0cdd4ba790028ef",
+                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/181042fd782146364e66fed138f04fc822cfaef6",
+                "reference": "181042fd782146364e66fed138f04fc822cfaef6",
                 "shasum": ""
             },
             "require": {
@@ -1477,14 +1581,14 @@
             },
             "require-dev": {
                 "phpbench/phpbench": "^0.13",
-                "phpunit/phpunit": "^5.7.21 || ^6.3",
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2",
                 "zendframework/zend-coding-standard": "~1.0.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev",
-                    "dev-develop": "3.2-dev"
+                    "dev-master": "3.2.x-dev",
+                    "dev-develop": "3.3.x-dev"
                 }
             },
             "autoload": {
@@ -1496,12 +1600,13 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "homepage": "https://github.com/zendframework/zend-stdlib",
+            "description": "SPL extensions, array utilities, error handlers, and more",
             "keywords": [
+                "ZendFramework",
                 "stdlib",
-                "zf2"
+                "zf"
             ],
-            "time": "2017-10-24T18:17:07+00:00"
+            "time": "2018-04-30T14:23:00+00:00"
         }
     ],
     "packages-dev": [],
